@@ -25,10 +25,10 @@ export default function App() {
 
 
   return (
-    <div className="App">
+    <div className="h-screen w-full">
       <div className="container">
         <Sidebar visible={isOpenSidebar} close={closeSidebar} />
-        <h1>useDisclosure custom hook</h1>
+        <h1>Custom Hook</h1>
         <div className="button-container">
           <button onClick={openSidebar}>Open sidebar</button>
           <button onClick={openModal}>Open modal</button>
