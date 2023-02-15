@@ -8,7 +8,14 @@ function App() {
 			<h1>Compound Components</h1>
 			<main>
 				{characters.map((character) => (
-					<Card key={character.id} character={character} />
+					<Card key={character.id}>
+						<Card.Body>
+							<Card.Title>{character.title}</Card.Title>
+							<Card.Img src={character.image} alt={character.title} />
+							<Card.Text>{character.desc}</Card.Text>
+							<Card.Status>{character.status}</Card.Status>
+						</Card.Body>
+					</Card>
 				))}
 			</main>
 		</>
