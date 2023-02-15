@@ -1,0 +1,23 @@
+.character {
+  width: 200px;
+  margin-bottom: 15px;
+  padding: 12px;
+  background-color: #000;
+  border-radius: 4px;
+}
+
+.character-image {
+  width: 200px;
+  border-radius: 4px;
+}
+
+.character-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.character-body h2 {
+  color: #fff;
+  font-size: 28px;
+  line-height: 30px;
+}
