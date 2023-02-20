@@ -2,7 +2,6 @@ import {useEffect, useState} from "react";
 import CharacterList from "./components/CharacterList";
 import "./App.css";
 import {ICharacters} from "./interface/characters";
-import Loading from "./components/Loading";
 
 const App = () => {
 	const [characters, setCharacters] = useState<ICharacters[]>([]);
@@ -33,11 +32,7 @@ const App = () => {
 
 	return (
 		<div className='container'>
-			{characters.length > 0 ? (
-				<CharacterList characters={characters} />
-			) : (
-				<Loading />
-			)}
+			<CharacterList characters={characters} />
 		</div>
 	);
 };

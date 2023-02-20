@@ -1,5 +1,6 @@
 // Componente encapsulado com HOC
 
+import WithLoading from '../../hoc/WithLoading';
 import { ICharacters } from '../../interface/characters';
 import Character from "../Character";
 import "./CharacterList.css";
@@ -19,4 +20,4 @@ const CharacterList = ({ characters }: CharacterProps) => {
   );
 };
 
-export default CharacterList;
+export default WithLoading(CharacterList);
