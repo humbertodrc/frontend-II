@@ -9,6 +9,7 @@ import { Characters } from './interface/characters';
 const App = () => {
   const [rickandmorty, setRickandmorty] = useState(1);
   const [rickandmortyData, setRickandmortyData] = useState<Characters[]>([]);
+  const [error, setError] = useState(false);
 
   const handleChange = (e: any) => {
     setRickandmorty(e.target.value);
@@ -30,13 +31,14 @@ const App = () => {
       setRickandmortyData(toArray);
     } catch (e) {
       console.log(e);
+      setError(true);
     }
   };
 
   return (
     <>
       <Input handleSubmit={handleSubmit} handleChange={handleChange} />
-      <CharacterList rickandmortyData={rickandmortyData} />
+      <CharacterList error={error} rickandmortyData={rickandmortyData} />
     </>
   );
 };

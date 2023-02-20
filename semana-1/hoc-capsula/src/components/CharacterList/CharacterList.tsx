@@ -1,6 +1,7 @@
 
 import { FC } from "react";
 import { Characters } from '../../interface/characters';
+import WithError from '../WithError/WithError';
 
 
 interface Character {
@@ -13,7 +14,8 @@ interface Character {
 }
 
 interface CharacterListProps {
-	rickandmortyData: Characters[];
+  rickandmortyData: Characters[];
+  error: boolean;
 }
 
 const CharacterList: FC<CharacterListProps> = ({ rickandmortyData }) => {
@@ -36,4 +38,4 @@ const CharacterList: FC<CharacterListProps> = ({ rickandmortyData }) => {
   );
 }
 
-export default CharacterList;
+export default WithError(CharacterList);
