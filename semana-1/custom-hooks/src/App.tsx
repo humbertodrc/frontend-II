@@ -1,28 +1,11 @@
-import { useState } from 'react';
 import { Modal, Sidebar } from './components';
 import "./App.css";
+import { useDisclosure } from './hooks/useDisclosure';
 
 export default function App() {
 
-  const [isOpenSidebar, setIsOpenSidebar] = useState(false);
-  const [isOpenModal, setIsOpenModal] = useState(false);
-
-  const openSidebar = () => {
-    setIsOpenSidebar(true);
-  }
-
-  const closeSidebar = () => {
-    setIsOpenSidebar(false);
-  }
-
-  const openModal = () => {
-    setIsOpenModal(true);
-  }
-
-  const closeModal = () => {
-    setIsOpenModal(false);
-  }
-
+  const { close: closeSidebar, isOpen: isOpenSidebar, open: openSidebar } = useDisclosure();
+  const { close: closeModal, isOpen: isOpenModal, open: openModal } = useDisclosure();
 
   return (
     <div className="h-screen w-full">
