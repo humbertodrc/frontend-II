@@ -1,8 +1,8 @@
 import { ApiResponse} from '../types/character';
 
-export const getCharacters = async (): Promise<ApiResponse> => {
-  const response = await fetch('https://rickandmortyapi.com/api/character');
-  const data = await response.json();
-  return data;
+export const getCharacters = async(): Promise<ApiResponse> => {
+  return fetch('https://rickandmortyapi.com/api/character')
+    .then((response) => response.json())
+    .catch((error) => console.log(error));
 };
 
