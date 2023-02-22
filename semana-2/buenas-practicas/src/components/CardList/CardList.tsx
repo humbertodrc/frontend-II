@@ -1,23 +1,15 @@
-import {useState, useEffect} from "react";
-import {getCharacters} from "../../api/characters";
-import {Character} from "../../types/character";
+import { useApi } from '../../hook/useApi';
 
 export interface CardListInterface {}
 
 const CardList: React.FC<CardListInterface> = () => {
-	const [data, setData] = useState<Character[]>([]);
-
-	const getData = async () => {
-		const response = await getCharacters();
-		setData(response.results);
-	};
-
-	useEffect(() => {
-		getData();
-	}, []);
+	
+	const { data, error} = useApi();
 
 	return (
-		<section className="grid grid-cols-12 gap-6">
+		<>
+			{error.hasError && <p className='text-white'>{error.errorMessage}</p>}
+			<section className="grid grid-cols-12 gap-6">
 			{data.map((character) => (
 				<div
 					key={character.id}
@@ -34,6 +26,7 @@ const CardList: React.FC<CardListInterface> = () => {
 				</div>
 			))}
 		</section>
+		</>
 	);
 };
 
