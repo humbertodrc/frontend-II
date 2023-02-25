@@ -1,0 +1,39 @@
+.about {
+  background-color: rgb(243, 243, 243);
+  text-align: center;
+}
+.about ul {
+  list-style: none;
+}
+
+.blockText {
+  width: 40%;
+  margin: 0 auto;
+  font-size: 0.6rem;
+}
+
+.buttonAbout {
+  width: 230px;
+  height: 60px;
+  padding: 0px 16px;
+  border-radius: 4px;
+  background-color: rgb(66, 66, 255);
+  border: none;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  color: white;
+  margin: 32px auto 32px auto;
+}
+
+.buttonAbout:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+.imageCite {
+  width: 500px;
+  margin: 0 auto;
+}

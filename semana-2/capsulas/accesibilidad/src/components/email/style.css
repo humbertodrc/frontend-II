@@ -1,0 +1,27 @@
+form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 24px;
+}
+
+form input {
+  width: 600px;
+  height: 60px;
+  font-size: 1.2rem;
+  padding-left: 16px;
+}
+
+form button {
+  width: 600px;
+  height: 60px;
+  background-color: rgb(66, 66, 255);
+  border: none;
+  font-size: 1.4rem;
+  color: white;
+}
+
+form button:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}
