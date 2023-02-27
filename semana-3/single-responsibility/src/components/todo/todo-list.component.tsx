@@ -1,6 +1,5 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
-import TodoType from "../../types/todo.types";
+import useApi from "../../hooks/useApi";
+import { List } from "../List";
 
 // Single-responsibility principle
 // En el siguiente componente estamos violando el principio SRP
@@ -8,31 +7,19 @@ import TodoType from "../../types/todo.types";
 // para mejorar nuestro codigo
 
 const TodoList = () => {
-  const [todos, setTodos] = useState<TodoType[]>([]);
+  
+	const {todos} = useApi();
 
-  useEffect(() => {
-    async function getTodos() {
-      const { data } = await axios.get(
-        "https://jsonplaceholder.typicode.com/todos/"
-      );
-      const firstTen = data.slice(0, 10);
-      setTodos(firstTen);
-    }
-    getTodos();
-  }, []);
-
-  const renderTodos = () => {
-    return todos.map((todo: TodoType) => {
-      return <li>✅{` Tarea ${todo.id}: ${todo.title}`}</li>;
-    });
-  };
-
-  return (
-    <section>
-      <h1>To Do List 👨‍💻</h1>
-      <ul>{renderTodos()}</ul>
-    </section>
-  );
+	return (
+		<section>
+			<h1>To Do List 👨‍💻</h1>
+			<ul>
+				{todos.map((todo) => (
+					<List todo={todo} />
+				))}
+			</ul>
+		</section>
+	);
 };
 
 export default TodoList;
