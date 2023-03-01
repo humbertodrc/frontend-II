@@ -10,13 +10,13 @@ const LoginForm : React.FC = () => {
   const handleSubmit = async (evt: React.SyntheticEvent) => {
     evt.preventDefault()
 		await postApi.post("/posts", { title, body: bodyPost })
-		alert(`Submitting Name ${title} ${bodyPost}`)
+		alert(`Enviado: ${title} ${bodyPost}`)
   }
   return (
 		<form onSubmit={handleSubmit} className={style.formulario}>
-			<label htmlFor="title">Titulo</label>
+			<label style={{color: 'black'}} htmlFor="title">Titulo</label>
 			<input type="text" id='title' value={title} onChange={e => setTitle(e.target.value)} />
-			<label htmlFor="body">Contenido</label>
+			<label style={{color: 'black'}} htmlFor="body">Contenido</label>
       <input type="text" id='body' value={bodyPost} onChange={e => setBodyPost(e.target.value)} />
       <button type="submit" className={style.send}>Enviar</button>
     </form>

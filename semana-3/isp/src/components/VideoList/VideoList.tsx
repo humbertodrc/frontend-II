@@ -6,7 +6,6 @@ export interface VideoListProps {
 }
 
 const VideoList: React.FC<VideoListProps> = ({ items }) => {
-	console.log(items);
 	return (
 		<ul>
 			{items.map((item) => (
