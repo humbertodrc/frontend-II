@@ -11,7 +11,7 @@ abstract class Vehicle {
   }
 
   accelerate(targetSpeed: number) {
-    if (this.engineStarted) {
+    if (this.engineStarted) { //true
       this.speed = targetSpeed;
     } else {
       throw new Error("Engine is not started yet");

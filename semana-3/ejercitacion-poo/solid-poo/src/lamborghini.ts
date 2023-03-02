@@ -8,6 +8,14 @@ import Vehicle from "./vehicle";
 // Deberiamos implementar esa funcion sin modificar
 // la clase padre.
 
-class Lamborghini extends Vehicle {}
+class Lamborghini extends Vehicle {
+  accelerate(targetSpeed: number): void {
+    if (!this.engineStarted) { //true
+      this.engineStarted = true;
+    }
+
+    super.accelerate(targetSpeed)
+  }
+}
 
 export default Lamborghini;
