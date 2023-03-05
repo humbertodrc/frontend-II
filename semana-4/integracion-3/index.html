@@ -1,13 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + TS</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vite + TS</title>
+</head>
+
+<body>
+
+  <header class="py-5 text-center container">
+    <div class="row py-lg-5">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <h1 class="fw-light">Álbum de superhéroes</h1>
+        <p class="lead fw-bold">
+          ¡Creá y coleccioná tus superhéroes favoritos!
+        </p>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#inputModal">
+          Crear Superhéroe
+        </button>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="album py-5">
+      <!-- Cards container -->
+      <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3" id="card-container"></div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Modal -->
+  <div class="modal fade" id="inputModal" tabindex="-1" aria-labelledby="inputModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="inputModalLabel">Nuevo Superhéroe</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-nombre">Nombre</span>
+            <input type="text" class="form-control" aria-label="nombreSuperheroe" aria-describedby="basic-nombre"
+              id="nombre-personaje" />
+          </div>
+          <div class="input-group mb-3">
+            <span class="input-group-text">Nombre</span>
+            <select class="form-select" aria-label="select-elemento" id="elemento-personaje">
+              <option value="Agua" selected>Agua</option>
+              <option value="Aire">Aire</option>
+              <option value="Fuego">Fuego</option>
+              <option value="Tierra">Tierra</option>
+            </select>
+          </div>
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-avatar">Avatar</span>
+            <input type="text" class="form-control" aria-label="avatar" aria-describedby="basic-avatar"
+              id="avatar-personaje" />
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+            Cancelar
+          </button>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" id="crear-personaje">
+            Crear Superhéroe
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="app"></div>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
 </html>
