@@ -49,7 +49,7 @@ export const elementos : { [key: string]: Elemento } = {
 	},
 };
 
-interface PersonajePorDefecto {
+export interface PersonajePorDefecto {
   nombre: string;
   elemento: string;
   avatar: string;
@@ -83,7 +83,7 @@ export const personajesPorDefecto: PersonajePorDefecto[] = [
 ];
 
 
-export const TarjetaPersonaje = (personaje: any) => `
+export const TarjetaPersonaje = (personaje: Personaje) => `
 <div class="card shadow-sm">
   <div class="card-header">
     <img src=${personaje.avatar} alt="${personaje.nombre}" class="bd-placeholder-img card-img-top"/>
@@ -105,20 +105,85 @@ export const TarjetaPersonaje = (personaje: any) => `
 </div>
 `;
 
+export class Personaje{
+	nombre: 	string;
+	elemento: string;
+	avatar: 	string;
+  logo: 		string;
+  debilidad:string;
+  fuerza:		number;
+  vida: 		number;
+  defensa: 	number;
+	velocidad: number;
+	
+	constructor(nombre:string, elemento:string, avatar: string) {
+		const {logo, debilidad, fuerza, vida, defensa, velocidad } = elementos[elemento] //AGUA,FUEGO, TIERRA, AIRE
+		
+		this.nombre = nombre;
+		this.elemento = elemento;
+		this.avatar = avatar;
+		this.logo = logo;
+		this.debilidad = debilidad;
+		this.fuerza = fuerza;
+		this.vida = vida;
+		this.defensa = defensa;
+		this.velocidad = velocidad;
+	}
+
+}
+
+const crearPersonajesPorDefecto = (personajes: PersonajePorDefecto[]) => (
+	personajes.map((personaje) => new Personaje(personaje.nombre, personaje.elemento, personaje.avatar))
+)
+
+const crearTarjetaPersonaje = (personaje: Personaje) => {
+	const card = document.createElement("div");
+	card.classList.add("row");
+
+	card.innerHTML = TarjetaPersonaje(personaje);
+	return card;
+}
+
+const renderizarPersonajes = (personajes: Personaje[]) => {
+	const CONTAINER = document.querySelector<HTMLDivElement>("#card-container") as HTMLDivElement;
+
+	CONTAINER.innerHTML = "";
+
+	personajes.map((personaje) => {
+		const card = crearTarjetaPersonaje(personaje);
+		CONTAINER.appendChild(card);
+	})
+
+}
+
+const actualizarPersonajes = (nombre: string, elemento: string, avatar: string) => {
+	const personajesIniciales = crearPersonajesPorDefecto(personajesPorDefecto);
+
+	const personajeNuevo = new Personaje(nombre, elemento, avatar)
+
+	const personajesActualizados = [...personajesIniciales, personajeNuevo];
+
+	renderizarPersonajes(personajesActualizados);
+}
+
 
 const $BTN_AGREGAR_PERSONAJE = document.querySelector<HTMLButtonElement>("#crear-personaje") as HTMLButtonElement;
 
 $BTN_AGREGAR_PERSONAJE.addEventListener("click", (event) => {
   event.preventDefault();
-  const nombre = document.querySelector<HTMLInputElement>("#nombre-personaje") as HTMLInputElement;
-  const elemento = document.querySelector<HTMLSelectElement>("#elemento-personaje") as HTMLSelectElement;
-  const avatar = document.querySelector<HTMLInputElement>("#avatar-personaje") as HTMLInputElement;
+  const nombre = document.querySelector<HTMLInputElement>("#nombre-personaje")?.value;
+  const elemento = document.querySelector<HTMLSelectElement>("#elemento-personaje")?.value;
+  const avatar = document.querySelector<HTMLInputElement>("#avatar-personaje")?.value;
 
 	if (nombre && elemento && avatar) {
+		actualizarPersonajes(nombre, elemento, avatar)
 		// Aquí creamos el personaje y lo agregamos a la lista de personajes.
 	}
 });
 
 window.addEventListener("load", () => {
 	// Aquí creamos la lista de personajes iniciales que se mostrarán en la página.
+	const personjesIniciales = crearPersonajesPorDefecto(personajesPorDefecto);
+
+	renderizarPersonajes(personjesIniciales);
 });
