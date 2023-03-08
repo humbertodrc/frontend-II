@@ -10,7 +10,7 @@ const App = () => {
     setLogged(!logged);
   };
 
-  return <Wrapped changeState={changeState} />;
+  return <Wrapped logged={logged} changeState={changeState} />;
 };
 
 export default App;

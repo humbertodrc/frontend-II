@@ -3,10 +3,11 @@ import Character from '../character';
 
 interface WrappedProps {
   changeState: () => void;
+  logged: boolean;
 }
 
 
-const Wrapped: FC<WrappedProps> =({ changeState }) => {
+const Wrapped: FC<WrappedProps> =({ changeState,logged }) => {
   return (
     <div>
       <h1>Orkut</h1>
