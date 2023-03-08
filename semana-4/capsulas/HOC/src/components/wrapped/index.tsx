@@ -7,7 +7,7 @@ interface WrappedProps {
 }
 
 
-const Wrapped: FC<WrappedProps> =({ changeState,logged }) => {
+const Wrapped: FC<WrappedProps> =({ changeState }) => {
   return (
     <div className='container'>
       <h1>Orkut</h1>
