@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import Hoc from '../../hoc';
 import Character from '../character';
 
 interface WrappedProps {
@@ -17,4 +18,4 @@ const Wrapped: FC<WrappedProps> =({ changeState }) => {
   );
 }
 
-export default Wrapped;
+export default Hoc(Wrapped);
