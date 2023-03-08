@@ -9,7 +9,7 @@ interface WrappedProps {
 
 const Wrapped: FC<WrappedProps> =({ changeState }) => {
   return (
-    <div>
+    <div className='container'>
       <h1>Orkut</h1>
       <button onClick={changeState}>Salir</button>
       <Character />
