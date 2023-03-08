@@ -3,6 +3,7 @@ import Character from '../character';
 
 interface WrappedProps {
   changeState: () => void;
+  logged: boolean;
 }
 
 
