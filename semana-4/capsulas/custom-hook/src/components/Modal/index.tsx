@@ -3,19 +3,16 @@ import React, { FC } from "react";
 interface ModalProps {
 	title: string;
 	children: React.ReactNode;
+	isSohowing: boolean;
+	handleShowModal: () => void;
 }
 
-const Modal: FC<ModalProps> = ({ title, children }) => {
-  
-  const handleShowModal = () => {
-    console.log("handleShowModal");
-  };
+const Modal: FC<ModalProps> = ({ title, children, isSohowing, handleShowModal }) => {
 
-  const isShowing = false;
 
 	return (
 		<>
-      {isShowing && (
+      {isSohowing && (
         <div className="modal-overlay">
 				<div className="modal-wrapper">
 					<div className="modal">
