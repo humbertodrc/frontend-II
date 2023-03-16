@@ -31,7 +31,7 @@ const useStyles = createUseStyles({
 
 const ButtonJSS: React.FC<ButtonJSSProps> = ({children, spacing, labelColor, fontWeight, fontStyle}) => {
 
-	const classes = useStyles(spacing, labelColor, fontWeight, fontStyle)
+	const classes = useStyles({spacing, labelColor, fontWeight, fontStyle})
 	
   return (
     <button className={classes.myButton}>
