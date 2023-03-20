@@ -1,7 +1,8 @@
 import { FC, PropsWithChildren } from 'react';
+import { CardBodyWrapper } from './card.styles';
 
 const CardBody: FC<PropsWithChildren<object>> = ({ children }: PropsWithChildren<object>) => (
-  <div className={'card-body'}>{children}</div>
+  <CardBodyWrapper>{children}</CardBodyWrapper>
 );
 
 export default CardBody;
