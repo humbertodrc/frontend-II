@@ -1,0 +1,8 @@
+.mobile-nav {
+    flex-direction: column;
+}
+@media (min-width: 1000px) {
+    .mobile-nav {
+        display: none;
+    }
+}

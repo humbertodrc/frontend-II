@@ -1,0 +1,20 @@
+.logo {
+    width: 10rem;
+}
+
+
+@media (max-width: 1000px) {
+    .nav {
+        display: none;
+    }
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #333333;
+    transition: all 0.6s ease;
+}
+
+.nav-link.active {
+    color: #0a4d9d;
+}

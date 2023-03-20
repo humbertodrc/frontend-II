@@ -1,0 +1,82 @@
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  font-family: Helvetica,  sans-serif;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+}
+
+/** BUTTON STYLES **/
+.button{
+  cursor: pointer;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  border: 0;
+  border-radius: 5px;
+  background-color: #8d2020;
+  color: white;
+}
+.button.primary {
+  background-color:rgb(10, 77, 157)
+}
+
+.button:disabled {
+   cursor: inherit;
+   background-color: rgb(128, 134, 140);
+ }
+
+.icon-button {
+  background-color: transparent;
+  font-size: 18px;
+  border: transparent;
+}
+
+/** TABLE STYLES **/
+table{
+  font-size: 0.9rem;
+  width: 100%;
+  color: #212529;
+  vertical-align: top;
+  border-color: #e0e0e0;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+table tbody > tr {
+  cursor: pointer;
+}
+
+table tr:hover {
+  background-color: rgba(0, 0, 0, 0.025);
+}
+
+table th {
+    font-weight: bold;
+}
+
+table th,
+table td {
+  border: 0 solid;
+  border-bottom-width: 1px;
+  border-color: inherit;
+  padding: 0.5rem 1.4rem;
+}
+table tr:nth-of-type(odd) > * {
+  background-color: rgba(0, 0, 0, 0.03);
+  color: #212529;
+}

@@ -1,0 +1,35 @@
+.search-form {
+    display: flex;
+    justify-content: space-around;
+    height: fit-content;
+    width: 30%;
+    border-radius: 0.5rem;
+    margin-right: 5%;
+    padding: 0 1rem;
+    border: 1px solid grey;
+    transition: all 0.8s ease;
+}
+
+.search-form:hover{
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 1000px) {
+    .search-form {
+        margin-right: 0;
+        font-size: 0.2rem;
+        width: 70%;
+    }
+}
+
+.search-input {
+    width: 70%;
+    height: fit-content;
+    border-radius: 0.5rem;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    padding: 0.5rem;
+    font-size: 18px;
+    cursor: pointer;
+}
