@@ -1,6 +1,5 @@
-describe('Prueba Primer test', () => {
-  // Test
+describe('Prueba en test', () => {
   test('Este test debe pasar', () => {
-    expect(1).toBe(1)
+    expect(true).toBe(true)
   })
 })
