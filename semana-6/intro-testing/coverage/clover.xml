@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1679613550107" clover="3.2.0">
+  <project timestamp="1679613550107" name="All files">
+    <metrics statements="17" coveredstatements="16" conditionals="0" coveredconditionals="0" methods="12" coveredmethods="10" elements="29" coveredelements="26" complexity="0" loc="17" ncloc="17" packages="3" files="7" classes="7"/>
+    <package name="components.Counter">
+      <metrics statements="5" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="3"/>
+      <file name="Counter.tsx" path="F:\proyectos\DH\Frontend-2-feb-2023\semana-6\intro-testing\src\components\Counter\Counter.tsx">
+        <metrics statements="5" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="3"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="4" type="stmt"/>
+        <line num="11" count="4" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="data">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="technologies.ts" path="F:\proyectos\DH\Frontend-2-feb-2023\semana-6\intro-testing\src\data\technologies.ts">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="8" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="pruebas-base">
+      <metrics statements="11" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="7"/>
+      <file name="array.ts" path="F:\proyectos\DH\Frontend-2-feb-2023\semana-6\intro-testing\src\pruebas-base\array.ts">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+      </file>
+      <file name="callBack.ts" path="F:\proyectos\DH\Frontend-2-feb-2023\semana-6\intro-testing\src\pruebas-base\callBack.ts">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+      </file>
+      <file name="funciones.ts" path="F:\proyectos\DH\Frontend-2-feb-2023\semana-6\intro-testing\src\pruebas-base\funciones.ts">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="14" type="stmt"/>
+      </file>
+      <file name="number.ts" path="F:\proyectos\DH\Frontend-2-feb-2023\semana-6\intro-testing\src\pruebas-base\number.ts">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+      </file>
+      <file name="string.ts" path="F:\proyectos\DH\Frontend-2-feb-2023\semana-6\intro-testing\src\pruebas-base\string.ts">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>
