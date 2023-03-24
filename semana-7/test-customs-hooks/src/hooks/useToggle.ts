@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function useDisclosure() {
+export default function useToggle() {
   const [isOpen, setIsOpen] = useState(false);
 
   const open = () => {
