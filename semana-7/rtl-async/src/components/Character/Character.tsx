@@ -25,7 +25,7 @@ const Character = () => {
 					<article key={data.id} className="character">
 						<img src={data.image} alt="personaje" />
 						<div>
-							<h2>{data.name}</h2>
+							<h2 className='name'>{data.name}</h2>
 							<p>Status: {data.status}</p>
 						</div>
 					</article>
