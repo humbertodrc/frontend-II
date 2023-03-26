@@ -8,6 +8,7 @@ describe('useAlert', () => {
             const view = renderHook(() => useAlert(), {});
 
             view.result.current.dispatchSuccessAlert('my success message');
+            
             expect(window.alert).toBeCalledWith('SUCCESS: my success message');
         })
     })
