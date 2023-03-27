@@ -1,5 +1,5 @@
 import React from 'react';
-import './styles/Sidebar.css';
+// import './styles/Sidebar.css';
 export interface SidebarInterface {
 	visible: boolean;
 	close: () => void;
