@@ -3,6 +3,8 @@ import { url } from '../api/endPoint';
 import { results } from './results';
 
 
+const result = "datos harcodeado"
+
 export const handlers = [
   rest.get(url, (req, res, ctx) => {
     console.log("Ejecutando el handler de msw");
