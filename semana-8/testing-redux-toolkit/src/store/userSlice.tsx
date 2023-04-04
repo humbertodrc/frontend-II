@@ -1,5 +1,6 @@
 import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
 import axios from "axios";
+import { User } from '../interface';
 
 interface UserState {
   data: User | null;
@@ -43,21 +44,4 @@ const userSlice = createSlice({
 
 export default userSlice.reducer;
 
-export interface Name {
-  first: string;
-  last: string;
-}
 
-export interface Picture {
-  large: string;
-}
-
-export interface Result {
-  name: Name;
-  email: string;
-  picture: Picture;
-}
-
-export interface User {
-  results: Result[];
-}
