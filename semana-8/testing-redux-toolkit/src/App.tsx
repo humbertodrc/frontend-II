@@ -4,7 +4,6 @@ import { fetchUser } from "./store/userSlice";
 import "./styles.css";
 
 const App = () => {
-  console.log("App /");
   const {data, loading, error} = useAppSelector((state) => state.user);
 
   const dispatch = useAppDispatch();
